@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Local AI Adventure: Install Deepseek @ SudoRoom!</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&family=Roboto+Mono&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="container">
+
+        <header>
+            <h1>Welcome, SudoRoom Creators! ✨</h1>
+            <p class="intro">
+                Ever wondered how those powerful AI chat tools work? Want to tinker with one right on your own computer, without needing constant internet or worrying about privacy? You're in the right place!
+            </p>
+            <p class="intro">
+                Today, we're going on an adventure together to install Deepseek, a family of awesome open-source AI models, right here on our local machines using a tool called <strong>Ollama</strong>. Think of it like setting up your own mini-ChatGPT that you control. Let's dive in!
+            </p>
+             <!-- Glitch Asset URL will go here -->
+            <img src="https://cdn.glitch.global/fc402218-2df3-4626-a5cd-a611f09f30e3/Incorrect_graphic.png?v=1743274889536" alt="Diverse group of women+ collaborating happily around laptops in a hackerspace setting." class="header-image">
+        </header>
+
+        <section id="prep">
+            <h2>What You'll Need (Our Prep List)</h2>
+            <ul>
+                <li><strong>Your Computer:</strong> A reasonably modern Mac, Windows, or Linux machine.</li>
+                <li><strong>Some Space:</strong> At least <strong>8GB of RAM</strong> (16GB+ recommended for smoother running) and <strong>~5-10GB of free disk space</strong> <em>per model</em>.</li>
+                <li><strong>Internet Connection:</strong> Just for the initial downloads.</li>
+                <li><strong>Curiosity & Patience:</strong> The most important ingredients! We learn together.</li>
+            </ul>
+        </section>
+
+        <hr>
+
+        <section id="step1">
+            <h2>Step 1: Getting Ollama - Our AI Model Runner</h2>
+            <p>Think of Ollama as the friendly manager for our AI models. It handles the tricky parts of downloading, setting up, and running them locally.</p>
+
+            <!-- Glitch Asset URL will go here -->
+            <img src="https://cdn.glitch.global/fc402218-2df3-4626-a5cd-a611f09f30e3/ollama_laptop.png?v=1743385249990" alt="Simple diagram: Box labeled Ollama containing icons for different AI models like Deepseek." class="diagram-image">
+
+            <ul>
+                <li><strong>Head to the Ollama Website:</strong> Open your browser and go to <a href="https://ollama.com/" target="_blank" rel="noopener noreferrer">https://ollama.com/</a></li>
+                <li><strong>Click the Big Download Button:</strong> It usually detects your OS (macOS, Windows, Linux). Follow the specific instructions for your system:</li>
+                <li><strong>macOS:</strong> Download `.dmg`, open it, drag Ollama to Applications.</li>
+                <li><strong>Windows:</strong> Download `.exe`, run it, follow prompts.</li>
+                <li><strong>Linux:</strong> Open your Terminal and run this command:
+                    <pre><code>curl -fsSL https://ollama.com/install.sh | sh</code></pre>
+                </li>
+                <li><strong>Verify Installation (All Systems):</strong> Open your Terminal (Mac/Linux) or PowerShell/Command Prompt (Windows). Type this and press Enter:
+                    <pre><code>ollama --version</code></pre>
+                    You should see a version number. If yes, high five! 🙌 Ollama is installed! If not, double-check the steps or ask a neighbor.
+                </li>
+            </ul>
+        </section>
+
+        <hr>
+
+        <section id="step2">
+            <h2>Step 2: Downloading Your First Deepseek Model!</h2>
+             <!-- Glitch Asset URL will go here -->
+            <img src="https://cdn.glitch.global/fc402218-2df3-4626-a5cd-a611f09f30e3/ollama_fetcher.png?v=1743384986462" alt="Simple diagram: Box labeled Ollama containing icons for different AI models like Deepseek." class="diagram-image">
+
+            <p>Ollama is ready! Let's ask it to fetch a Deepseek model. We'll start with a good general-purpose one: `deepseek-llm:7b` (7 billion parameters - a good size for local use).</p>
+            <ul>
+                <li><strong>Open your Terminal or PowerShell/Command Prompt.</strong></li>
+                <li><strong>The Magic Command:</strong> Type this command and press Enter:
+                    <pre><code>ollama pull deepseek-llm:7b</code></pre>
+                </li>
+                <li><strong>Patience is Key:</strong> This download might take a little while (5-30 minutes depending on your internet). You'll see progress bars. Grab a coffee or chat! ☕️</li>
+            </ul>
+
+             <!-- Glitch Asset URL will go here -->
+            <img src="https://cdn.glitch.global/fc402218-2df3-4626-a5cd-a611f09f30e3/Waiting_coffee.png?v=1743385650545" alt="Screenshot of a terminal showing the 'ollama pull deepseek-llm:7b' command running with download progress." class="screenshot-image">
+
+            <p>Once it's finished, you'll see a "success" message. You have an AI model on your computer! How cool is that?!</p>
+        </section>
+
+        <hr>
+
+        <section class="quiz-section">
+            <h2>Checkpoint! Quick Quiz Time! 🧠</h2>
+            <p>Let's see if we're on the same page. Just for fun!</p>
+            <a href="" target="_blank" class="quiz-button">Take Quiz #1 on Glitch ➡️</a>
+            <p class="small-note">(This will open the quiz in a new tab)</p>
+        </section>
+
+        <hr>
+
+        <section id="step3">
+            <h2>Step 3: Chatting with Deepseek!</h2>
+            <p>This is where the magic happens! Let's talk to our local AI.</p>
+            <ul>
+                <li><strong>Stay in your Terminal or PowerShell/Command Prompt.</strong></li>
+                <li><strong>Run the Model:</strong> Type the following and press Enter:
+                    <pre><code>ollama run deepseek-llm:7b</code></pre>
+                </li>
+                <li><strong>Wait a Moment:</strong> It might take a few seconds to load.</li>
+                <li><strong>Start Chatting:</strong> You'll see a prompt like <code>>>> Send a message (/? for help):</code>. Type your message and press Enter.
+                    <br><em>Example:</em> <code>>>> Tell me a fun fact about Oakland.</code>
+                </li>
+                <li><strong>See the Response:</strong> The AI will generate text right there!</li>
+                <li><strong>Keep Chatting:</strong> Ask follow-up questions!</li>
+                <li><strong>To Exit:</strong> Type <code>/bye</code> and press Enter.</li>
+            </ul>
+
+            <!-- Glitch Asset URL will go here -->
+            <img src="[YOUR_GLITCH_ASSET_URL_FOR_TERMINAL_CHAT]" alt="Screenshot of terminal showing a chat interaction using 'ollama run deepseek-llm:7b'." class="screenshot-image">
+
+            <p class="celebrate"><strong>Whoa!</strong> You're running AI locally! Take a moment to appreciate that! 🎉</p>
+        </section>
+
+        <hr>
+
+        <section id="step4">
+            <h2>Step 4: Exploring Other Things (Optional, but Fun!)</h2>
+            <p>You've got the basics! Here are more commands:</p>
+            <ul>
+                <li><strong>See Your Models:</strong> <pre><code>ollama list</code></pre></li>
+                <li><strong>Try a Coding Model:</strong> <pre><code>ollama pull deepseek-coder:6.7b</code></pre> (Needs download space!) Then run: <pre><code>ollama run deepseek-coder:6.7b</code></pre></li>
+                <li><strong>Remove a Model:</strong> <pre><code>ollama rm deepseek-llm:7b</code></pre> (Frees up disk space).</li>
+            </ul>
+        </section>
+
+        <hr>
+
+        <section class="quiz-section">
+            <h2>Checkpoint! Final Quick Quiz! 💡</h2>
+            <p>One last check-in to solidify what we've learned!</p>
+            <a href="[YOUR_GLITCH_QUIZ_2_URL]" target="_blank" class="quiz-button">Take Quiz #2 on Glitch ➡️</a>
+            <p class="small-note">(This will open the quiz in a new tab)</p>
+        </section>
+
+        <hr>
+
+        <section id="troubleshooting">
+            <h2>Troubleshooting & Common Hiccups (It's Okay!)</h2>
+            <ul>
+                <li><strong>"Command not found: ollama":</strong> Try closing and reopening your terminal/prompt. Restart your computer (Windows sometimes needs this). Revisit Step 1 installation. Ask for help!</li>
+                <li><strong>Running Slow:</strong> Close other heavy apps. Check RAM (need 8GB+, 16GB+ better). Consider smaller models if available.</li>
+                <li><strong>Download Errors:</strong> Check internet. Server might be busy, try `ollama pull ...` again later.</li>
+                <li><strong>"Error: model not found locally":</strong> Check spelling in `ollama run ...` command matches the name from `ollama list`.</li>
+            </ul>
+            <p>Tinkering involves troubleshooting. That's the hackerspace spirit! Help each other out.</p>
+        </section>
+
+        <hr>
+
+        <section id="next-steps">
+            <h2>You Did It! What's Next?</h2>
+            <p class="celebrate"><strong>Congratulations!</strong> You've installed and run local AI! That's awesome!</p>
+
+             <!-- Glitch Asset URL will go here -->
+            <img src="[YOUR_GLITCH_ASSET_URL_FOR_CONGRATS_IMAGE]" alt="Graphic with 'Congratulations!' text and diverse hands giving high-fives." class="footer-image">
+
+            <p>What now?</p>
+            <ul>
+                <li><strong>Explore other models:</strong> Check the <a href="https://ollama.com/library" target="_blank" rel="noopener noreferrer">Ollama Library</a>.</li>
+                <li><strong>Try GUI Front-ends:</strong> Look into "Ollama Web UI" or "Open WebUI" for a chat interface (requires separate installation).</li>
+                <li><strong>Integrate with Code:</strong> Ollama has an API for Python, etc.!</li>
+                <li><strong>Keep Learning & Sharing:</strong> Experiment and share your findings with the SudoRoom community!</li>
+            </ul>
+            <p>Happy hacking!</p>
+        </section>
+
+        <footer>
+            <p>Created with ♡ for the SudoRoom Community</p>
+        </footer>
+
+    </div> <!-- /container -->
+
+</body>
+</html>
