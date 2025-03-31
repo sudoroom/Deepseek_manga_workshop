@@ -1,0 +1,244 @@
+/* Basic Reset & Body */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Nunito', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #fdfaff; /* Very light, warm off-white */
+    padding: 20px;
+}
+
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    background-color: #fff;
+    padding: 30px 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+/* Header */
+header {
+    text-align: center;
+    margin-bottom: 40px;
+    border-bottom: 2px solid #e0cff0; /* Soft lavender */
+    padding-bottom: 20px;
+}
+
+h1 {
+    color: #6a1b9a; /* Deep purple */
+    margin-bottom: 15px;
+    font-size: 2.5em;
+}
+
+.intro {
+    font-size: 1.1em;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.header-image, .footer-image, .diagram-image, .screenshot-image {
+    max-width: 80%; /* Adjust as needed */
+    height: auto;
+    display: block;
+    margin: 25px auto;
+    border-radius: 6px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+.diagram-image {
+    max-width: 50%; /* Diagrams can be smaller */
+}
+
+
+/* Sections & Headings */
+section {
+    margin-bottom: 35px;
+}
+
+h2 {
+    color: #8e44ad; /* Medium purple */
+    margin-bottom: 20px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #eee;
+    font-size: 1.8em;
+}
+
+h3 {
+    color: #9b59b6; /* Lighter purple */
+    margin-top: 15px;
+    margin-bottom: 10px;
+    font-size: 1.4em;
+}
+
+/* Lists */
+ul {
+    list-style-position: outside;
+    margin-left: 20px; /* Indent list */
+    margin-bottom: 15px;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+li strong {
+    color: #6a1b9a; /* Match H1 color for emphasis */
+}
+
+/* Code Blocks & Inline Code */
+pre {
+    background-color: #f0f0f5; /* Light grey-blue */
+    padding: 15px;
+    border-radius: 5px;
+    overflow-x: auto; /* Handle long lines */
+    margin: 15px 0;
+    font-family: 'Roboto Mono', monospace;
+    font-size: 0.95em;
+    border: 1px solid #e0e0e5;
+}
+
+code { /* Inline code */
+    font-family: 'Roboto Mono', monospace;
+    background-color: #e8dff5; /* Lighter lavender */
+    padding: 2px 5px;
+    border-radius: 3px;
+    font-size: 0.9em;
+    color: #4a148c; /* Darker purple for contrast */
+}
+
+pre code { /* Reset specific styles for code inside pre */
+    background-color: transparent;
+    padding: 0;
+    border-radius: 0;
+    font-size: inherit; /* Inherit pre's font size */
+    color: inherit;
+}
+
+/* Links */
+a {
+    color: #8e44ad; /* Medium purple */
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+a:hover, a:focus {
+    color: #6a1b9a; /* Darker purple on hover */
+    text-decoration: underline;
+}
+
+/* Quiz Section */
+.quiz-section {
+    background-color: #f8f0fc; /* Very light purple */
+    padding: 25px;
+    border-radius: 8px;
+    text-align: center;
+    border: 1px dashed #d8bbf0; /* Dashed lavender border */
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.quiz-button {
+    display: inline-block;
+    background-color: #8e44ad;
+    color: #fff;
+    padding: 12px 25px;
+    border-radius: 25px; /* Pill shape */
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 15px;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.quiz-button:hover, .quiz-button:focus {
+    background-color: #6a1b9a;
+    text-decoration: none;
+    color: #fff;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+.small-note {
+    font-size: 0.85em;
+    color: #777;
+    margin-top: 10px;
+}
+
+/* Utilities & Footer */
+hr {
+    border: 0;
+    height: 1px;
+    background-color: #e0cff0; /* Soft lavender */
+    margin: 40px 0;
+}
+
+.celebrate {
+    font-weight: bold;
+    color: #27ae60; /* Friendly green */
+    text-align: center;
+    font-size: 1.1em;
+    margin-top: 20px;
+}
+
+footer {
+    text-align: center;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid #eee;
+    font-size: 0.9em;
+    color: #888;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        padding: 20px 25px;
+        margin: 10px auto;
+    }
+
+    h1 {
+        font-size: 2em;
+    }
+
+    h2 {
+        font-size: 1.6em;
+    }
+
+    .header-image, .footer-image, .diagram-image, .screenshot-image {
+        max-width: 95%; /* Allow images to take more width */
+    }
+     .diagram-image {
+        max-width: 70%;
+    }
+}
+
+@media (max-width: 480px) {
+     body {
+        padding: 5px;
+     }
+    .container {
+        padding: 15px 15px;
+    }
+    h1 {
+        font-size: 1.8em;
+    }
+    h2 {
+        font-size: 1.4em;
+    }
+     ul {
+        margin-left: 15px; /* Reduce list indent */
+     }
+    pre {
+        font-size: 0.9em;
+        padding: 10px;
+    }
+    .quiz-button {
+        padding: 10px 20px;
+        font-size: 0.95em;
+    }
+}
